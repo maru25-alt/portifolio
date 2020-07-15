@@ -1,0 +1,120 @@
+.template1{
+    //padding: 2em 1em;
+    .sidebar{
+        background-color: rgb(22, 22, 54);
+        color: #fff;
+        padding: 2em 0.5em;
+
+        .section-heading{
+            font-size: 1.5em;
+           
+         }
+ 
+        .name_section{
+            margin-bottom: 2em;
+           
+            h3{
+                font-size: 0.5em;
+                font-weight: bolder;
+                padding: 0.3em;
+            }
+    
+            img{
+                width:  9em;
+                border-radius: 50% ;
+            }
+        }
+
+        .contact_section{
+            margin-bottom: 2em;
+             .contact{
+                 display: flex;
+                 font-size: 0.9em;
+                 
+             }
+
+        }
+
+        .skills_section{
+            margin-bottom: 2em;
+
+            .skill{
+                label{
+                    font-size: 0.5em;
+                }
+            }
+
+        }
+       
+        
+      
+    }
+
+    .main{
+      .section-heading{
+          font-weight: bolder;
+          font-size: 2em;
+          text-transform: uppercase;
+       
+      }
+        .objective_section{
+            margin: 1em 0.5em;
+            border-bottom: solid 1px #444;
+            padding-bottom: 0.5em;
+        }
+        .education_section{
+            border-bottom: solid 1px #444; 
+            padding-bottom: 1.5em;
+
+            .education{
+                margin-bottom: 0.5em;
+                .title{
+                    font-weight: bolder;
+                }
+                .content{
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                }
+            }
+        }
+        .experience_section{
+            border-bottom: solid 1px #444;
+            padding-bottom: 1.5em;
+
+            .experience{
+
+                .section-subheading{
+                    font-weight: bolder;
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+
+                }
+
+            }
+
+        }
+        .achievements_section{
+      
+            border-bottom: solid 1px #444;
+            padding-bottom: 1.5em;
+            .achievements{
+                list-style: none;
+            }
+
+        }
+        .reference_section{
+            border-bottom: solid 1px #444;
+            padding-bottom: 1.5em;
+        }
+        .certification_sections{
+            border-bottom: solid 1px #444;
+            padding-bottom: 1.5em;
+        }
+        .language_section{
+            border-bottom: solid 1px #444;
+            padding-bottom: 1.5em;
+
+        }
+    }
+    
+}

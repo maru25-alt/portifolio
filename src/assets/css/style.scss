@@ -1,0 +1,205 @@
+@import './resume';
+
+//#28AE60  green
+//#ff5e13; orange
+ul li{
+    list-style: none;
+}
+
+section{
+    margin: auto 5em;
+}
+
+.progress-label{
+    font-size: 0.8em;
+}
+.modal-title{
+    color: #ff5e13;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.button-primary{
+    background-color: #28AE60;
+    color: #fff;
+    width: 8em;
+
+    &:hover{
+        color: #28AE60;
+        background: #fff;
+        border: 1px solid #28AE60;
+    }
+}
+
+
+.button-secondary{
+    background-color: #ff5e13;
+    color: #fff;
+    width: 10em;
+
+    &:hover{
+        color: #ff5e13;
+        background: #fff;
+        border: 1px solid #ff5e13;
+    }
+}
+
+.error{
+    color: red;
+    padding-bottom: 0.5em;
+}
+
+
+
+/// navbar
+.navbar{
+    margin-bottom: 5%;
+
+.navbar-brand{
+        margin: 0;
+        padding: 0;
+   
+    .logo-text{
+        color: #ff5e13;
+        font-weight: bolder;
+    }
+}
+    
+}
+
+//footer
+.footer{
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 5%;
+
+    .footer-top{
+       padding: 2em 0;
+      .navbar-brand{
+          margin-left: 2em;
+      }
+
+       .logo-text{
+           color: #ff5e13;
+           font-weight: 500;
+       }
+       p{
+           margin-left: 4em;
+       }
+
+       li a{
+           color: #28AE60;
+           font-size: 1.5em;
+
+           &:hover{
+               color: #fff;
+           }
+       }
+    }
+
+    .footer-bottom{
+        background-color: #000;
+    }
+}
+
+//home
+.home{
+  min-height: 80vh;
+  .home-body{
+     margin: 0 5%;
+     margin-top: 10%;
+
+      .home_text{
+          padding: 2em;
+
+          h3{
+              font-size: 2.5em;
+          }
+      }
+  }
+}
+
+//about
+.about{
+    h5{
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: #28AE60;
+    }
+    .about-text{
+        text-align: center;
+    }
+    .subsection{
+        margin-top: 5%;
+    }
+    .skillsLevel-container{
+        margin-top: 2%;
+       .card{
+           margin: 0.5em;
+           text-align: center;
+           box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+           h6{
+            text-align: center;
+            font-weight: bolder;
+            font-size: 1.2em;
+            padding: 0.5em 0;
+         }
+       }
+       
+    }
+}
+
+//portifolio
+.portifolio{
+    .portifolio-container{
+        width: 100%;
+    }
+    h5{
+        color: #28AE60;
+        font-size: 2em;
+        font-weight: bolder;
+        text-align: center;
+    }
+    
+  .portifolio-card{
+    box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: #fff;
+    width: 100%;
+    padding: 0.5em;
+
+    h6{
+        font-weight: bolder;
+        padding-top: 1em;
+    }
+    img{
+        width: 90%;
+        height: 200px;
+    }
+  }
+    
+
+}
+
+
+//contact
+.contact{
+    li a{
+        color: #28AE60;
+        font-size: 1.5em;
+
+        &:hover{
+            color: #000;
+        }
+    }
+
+    h1{
+        color: #28AE60;
+    }
+    h3{
+        color: #28AE60;
+    }
+}
