@@ -21,7 +21,7 @@ class Footer extends Component {
                             <p>
                                 I am fullstack web developer. Feel free to hire me at any time
                             </p>
-                            <div className="socail_links">
+                            <div className="socail_links ">
                                 <ul className=" d-flex  flex-row">
                                       <li >  <a className='p-3'  href="https://www.facebook.com/rudo.mapfumba"><i className="fab fa-facebook "></i> </a> </li>
                                     <li>
@@ -43,7 +43,7 @@ class Footer extends Component {
                     </div>
                     <div className=" col-md-4 col-sm-12">
                         <div className="footer_widget">
-                            <ul>
+                            <ul >
                             <h3 className="footer_title">
                                 Address
                             </h3>

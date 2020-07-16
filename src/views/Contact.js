@@ -58,7 +58,7 @@ export class Contact extends Component {
                         info@mysite.com
                     </p>        
                      <div>
-                            <ul className="d-flex ">                            
+                            <ul className="d-flex   social-icons">                            
                                  <li className="p-3">  <a  href="https://www.facebook.com/rudo.mapfumba"><i className="fab fa-facebook "></i> </a> </li>
                                     <li className="p-3"> <a href="https://github.com/maru25-alt"><i className="fab fa-github " ></i></a></li>
                                     <li className="p-3"> <a href="https://www.linkedin.com/in/rudo-mapfumba-6023a9167/"><i className="fab fa-linkedin " ></i></a></li>

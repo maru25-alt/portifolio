@@ -28,6 +28,21 @@ section{
         color: #28AE60;
         background: #fff;
         border: 1px solid #28AE60;
+
+        &::before{
+            transition-delay: 0s, 0s, 0.25s;
+        }
+        &::after{
+            transition-delay: 0s, 0s, 0.25s;
+        }
+
+       &::before, &::after{
+        border-color: #eb196e;
+        transition: border-color 0s, width 0.25s, height 0.25s;
+        width: 100%;
+        height: 100%;
+      }
+
     }
 }
 
@@ -48,7 +63,6 @@ section{
     color: red;
     padding-bottom: 0.5em;
 }
-
 
 
 /// navbar
@@ -107,7 +121,7 @@ section{
 
 //home
 .home{
-  min-height: 80vh;
+  min-height: 50vh;
   .home-body{
      margin: 0 5%;
      margin-top: 10%;
@@ -119,7 +133,76 @@ section{
               font-size: 2.5em;
           }
       }
+      .home_btns{
+          position: relative;
+          width: 90vmin;
+          left: 35%;
+          transform: translate(-50%, -50%);
+          margin-top: -20%;
+      }
   }
+}
+
+///home text
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+.animated-title {
+  color: #222;
+  font-family: Roboto, Arial, sans-serif;
+  height: 40vmin;
+  left: 35%;
+  position: relative;
+  margin-top: 10%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
+ 
+  margin-bottom: 0;
+}
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.animated-title > div div {
+  font-size: 12vmin;
+  padding: 2vmin 0;
+  position: absolute;
+}
+.animated-title  h3 {
+  display: block;
+}
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid #000;
+  top: 0;
+}
+.animated-title > div.text-top  {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top h3:first-child {
+  color: #767676;
+}
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+.animated-title > div.text-bottom p {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
 }
 
 //about
@@ -153,6 +236,63 @@ section{
     }
 }
 
+//about cards
+.card{
+    position: relative;
+    height: 20rem;
+}
+.card__side{
+    overflow: hidden;
+    //box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s ease;
+}
+.card__title {
+    height: 10rem;
+    padding: 4rem 2rem 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+
+.card__side--back{
+    transform: rotateY(180deg);
+    background: linear-gradient(-45deg, #9a4eff, #24ff72);
+}
+.card:hover .card__side--front-1{
+          transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+            transform: rotateY(0);
+  }
+  
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: #fff;
+  }
+
 //portifolio
 .portifolio{
     .portifolio-container{
@@ -170,19 +310,66 @@ section{
     background-color: #fff;
     width: 100%;
     padding: 0.5em;
+    height: 20em;
+    //transform: translate(-50%, -50%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.5s;
 
     h6{
         font-weight: bolder;
         padding-top: 1em;
     }
     img{
-        width: 90%;
-        height: 200px;
+     width: 100%;
+     height: 100%;
+       
     }
   }
-    
+
+  // portifolio cards
+  .card-image{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-color: #000;
+      transition: .5s;
+
+      &:hover img{
+          opacity: 0.4;
+          transition: .5s;
+      }
+  }
+
+  .portifolio-card:hover .card-image{
+      transform: translateY(-20em);
+      transition: all .9s;
+  }
+
+  .portifolio-card:hover .details{
+    transform: translateY(-10em);
+    transition: all .9s;
+  }
+
+  .details {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    background: #fff;
+    width: 100%;
+   // height: 120px;
+    z-index: 1;
+    padding: 10px;
 
 }
+
+}
+
 
 
 //contact
@@ -202,4 +389,73 @@ section{
     h3{
         color: #28AE60;
     }
+}
+.social-icons{
+   position: relative;
+   left: -5em;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 0.1em;
+    position: relative;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  .social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    transition: all 265ms ease-out;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+   
+  }
+  
+  .social-icons a:before {
+    transform: scale(0.8);
+    content: " ";
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100%;
+    display: block;
+    background: linear-gradient(45deg, #28AE60, #28AE60);
+    transition: all 265ms ease-out;
+
+
+  }
+  
+  .social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+  }
+  
+  .social-icons a:hover i {
+    transform: scale(1);
+    color: #ff5e13;
+    background: -webkit-linear-gradient(45deg, #ff5e13, #c648c8);
+    background-clip: text;
+    transition: all 265ms ease-in;
+  }
+
+
+.draw-border:hover::before,
+.draw-border:hover::after {
+  border-color: #eb196e;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+
+.draw-border:hover::before {
+ 
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+
+  transition-delay: 0s, 0.25s, 0s;
 }

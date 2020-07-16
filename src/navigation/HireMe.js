@@ -50,7 +50,7 @@ export class HireMe extends Component {
     render() {
         return (
             <div>
-                <button type="button" className="btn button-primary" data-toggle="modal" data-target="#staticBackdrop">
+                <button type="button" className="btn  button-primary" data-toggle="modal" data-target="#staticBackdrop">
                     Hire Me
                  </button>
 
